@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style2.css'%}">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h4>Submitted Info</h4>
+            <div>
+                <p class="tag">Name: </p><p class="out_put">{{name}}</p>
+            </div>
+            <div>
+                <p class="tag">Dojo Location: </p><p class="out_put">{{location}}</p>
+            </div>
+            <div>
+                <p class="tag">Favorite Language: </p><p class="out_put">{{fav_language}}</p>
+            </div>
+            <div>
+                <p class="tag">Comment: </p><p class="out_put">{{comment}}</p>
+            </div>
+                <button id="button">Go Back</button>
+        </div>
+    </div>   
+</body>
+</html>

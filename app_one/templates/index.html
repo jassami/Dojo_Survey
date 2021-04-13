@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dojo Survey</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+    </head>
+    <body>
+        <div class="container">
+            <div class="box">
+            <form class="form" action="/result" method="POST">
+                {% csrf_token%}
+                <label for="name">Your Name: </label>
+                <input id="name" type="text" name="name">
+                <p>Dojo Location: </p>
+                <input type="radio" id="ny" name="location" value="New York">
+                <label for="ny">New York</label>
+                <input type="radio" id="chicago" name="location" value="Chicago">
+                <label for="chicago">Chicago</label>
+                <input type="radio" id="la" name="location" value="Los Angeles">
+                <label for="la">Los Angeles</label>
+                <p>Favorite Language:</p>
+                <label for="python">Python</label>
+                <input type="checkbox" id="python" name="fav_language" value="Python">
+                <label for="java">Java</label>
+                <input type="checkbox" id="java" name="fav_language" value="Java">
+                <label for="php">PHP</label>
+                <input type="checkbox" id="php" name="fav_language" value="PHP"><br>
+                <p><label for="comment">Comment (optional): </label></p>
+                <input id="com_box" type="text" name="comment"><br>
+                <button id="button">Button</button>
+            </form>
+            </div>
+        </div>
+    </body>
+</html>
